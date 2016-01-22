@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -Dlog4j.configurationFile=directory/file.xml -->
+
+<Configuration>
+
+  <Appenders>
+
+    <Console name="Console">
+      <PatternLayout
+          pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+
+    <File name="file" fileName="log.txt">
+      <PatternLayout
+          pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+
+  </Appenders>
+
+  <Loggers>
+
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+    </Root>
+
+    <Logger name="melihovv.AvitoNewMessageChecker.AvitoNewMessageChecker"
+            level="info" additivity="false">
+      <AppenderRef ref="file" level="info"/>
+    </Logger>
+
+  </Loggers>
+
+</Configuration>
