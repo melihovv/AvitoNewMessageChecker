@@ -9,6 +9,6 @@
 заполнить необходимые поля.
 
 Запуск:
-java -Dlog4j.configurationFile=/path/to/log.xml /path/to/config.yaml
+java -Dlog4j.configurationFile=/path/to/log.xml -jar AvitoNewMessageChecker.jar /path/to/config.yaml
 
-По умолчанию логи пишутся на консоль и в файл log.txt (меняется в log.xml).
+По умолчанию логи пишутся в файл log.txt (меняется в log.xml).
